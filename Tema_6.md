@@ -39,7 +39,7 @@ access = response.get('access')
 print(key,access)
 ```
 ### Результат.
-![](pic/6лр_1.png)
+![](pic/5лр_1.png)
 
 
 ## Лабораторная работа №2
@@ -58,7 +58,7 @@ dict_market(name='Михаил', age=31, weight=70, eyes_color='blue')
 pprint(my_dict)
 ```
 ### Результат.
-![](pic/6лр_2.png)
+![](pic/5лр_2.png)
 
 
 ## Лабораторная работа №3
@@ -71,7 +71,7 @@ print(result)
 print(list(result))
 ```
 ### Результат.
-![](pic/6лр_3.png)
+![](pic/5лр_3.png)
 
 
 ## Лабораторная работа №4
@@ -88,7 +88,7 @@ bob = ("Георгий", 41, "Yandex")
 personal_info(*bob)
 ```
 ### Результат.
-![](pic/6лр_4.png)
+![](pic/5лр_4.png)
 
 
 ## Лабораторная работа №5
@@ -106,5 +106,5 @@ if __name__ == '__main__':
     print(tuple_sort((5, 5, 2.1, '1', 9)))
 ```
 ### Результат.
-![](pic/6лр_5.png)
+![](pic/5лр_5.png)
 

@@ -112,7 +112,9 @@ if __name__ == '__main__':
 ### При создании сайта у вас возникла потребность обрабатывать данные пользователя в странной форме, а потом переводить их в нужные вам форматы. Вы хотите принимать от пользователя последовательность чисел, разделенных пробелом, а после переформатировать эти данные в список и кортеж. Реализуйте вашу задумку.
 
 ```python
-
+x = input().split()
+my_tuple = tuple(x)
+print(f"Список = {x}\nКортеж = {my_tuple}")
 ```
 ### Результат.
 
@@ -121,7 +123,17 @@ if __name__ == '__main__':
 ### Николай знает, что кортежи являются неизменяемыми, но он очень упрямый и всегда хочет доказать, что он прав. Студент решил создать функцию, которая будет удалять первое появление определенного элемента из кортежа по значению и возвращать кортеж без него. Попробуйте повторить шедевр не признающего авторитеты начинающего программиста. Но учтите, что Николай не всегда уверен в наличии элемента в кортеже.
 
 ```python
+def remove_tumple():
+    x = input().split()
+    my_tuple = set(map(int,x))
+    b = int(input())
+    if b in my_tuple:
+        my_tuple.remove(b)
+        return tuple(my_tuple)
+    else:
+        return tuple(my_tuple)
 
+print(remove_tumple())
 ```
 ### Результат.
 
@@ -139,7 +151,24 @@ if __name__ == '__main__':
 ### Ваш хороший друг владеет офисом со входом по электронным картам, ему нужно чтобы вы написали программу, которая показывала в каком порядке сотрудники входили и выходили из офиса. Определение сотрудника происходит по id. Напишите функцию, которая на вход принимает кортеж и случайный элемент (id), его можно придумать самостоятельно. Требуется вернуть новый кортеж, начинающийся с первого появления элемента в нем и заканчивающийся вторым его появлением включительно
 
 ```python
+def enters_inf(*args):
+    info = input().split()
+    enter_tuple = list(map(int, info))
+    id = int(input())
 
+    if id in enter_tuple and enter_tuple.count(id) == 1:
+        enter_tuple = tuple(enter_tuple[enter_tuple.index(id):])
+        print(enter_tuple)
+    elif id in enter_tuple and enter_tuple.count(id) > 1:
+        new_tuple = tuple(enter_tuple[enter_tuple.index(id)+1:])
+        new_tuple = tuple(enter_tuple[enter_tuple.index(id):new_tuple.index(id) + enter_tuple.index(id) + 2])
+        print(new_tuple)
+
+    else:
+        enter_tuple.clear()
+        return print(tuple(enter_tuple))
+
+enters_inf()
 ```
 ### Результат.
 
@@ -148,6 +177,30 @@ if __name__ == '__main__':
 ### Самостоятельно придумайте и решите задачу, в которой будут обязательно использоваться кортеж или список. Проведите минимум три теста для проверки работоспособности вашей задачи.
 
 ```python
+def week_info(*args):
+  days_of_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  attendance = input().split()
+  attendance = [int(item) for item in attendance]
 
+  if len(attendance) != 7:
+    print('Неверное количество дней, их должно быть 7')
+  else:
+    max_attendance = max(attendance)
+    max_day = days_of_week[attendance.index(max_attendance)]
+
+    min_attendance = min(attendance)
+    min_day = days_of_week[attendance.index(min_attendance)]
+
+
+    day_attendance = int(sum(attendance) / len(attendance))
+
+    print(
+    f"Максимальное количество посетителей: {max_attendance} в ({max_day})\n"
+    f"Минмальное количество посетителей: {min_attendance} в ({min_day})\n"
+    f"Среднее количество посетителей за всю неделю: {day_attendance}"
+    )
+
+
+week_info()
 ```
 ### Результат.

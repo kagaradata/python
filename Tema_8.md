@@ -33,7 +33,7 @@ class Car:
 my_car = Car("Toyota", "Corolla")
 ```
 ### Результат.
-![](pic/8лр1.PNG)
+![](pic/8лб1.PNG)
 
 
 ## Лабораторная работа №2
@@ -60,7 +60,7 @@ my_car = Car("Toyota", "Corolla")
 my_car.drive()
 ```
 ### Результат.
-![](pic/8лр2.PNG)
+![](pic/8лб2.PNG)
 
 
 ## Лабораторная работа №3
@@ -98,7 +98,7 @@ my_electric_car.drive()
 my_electric_car.charge()
 ```
 ### Результат.
-![](pic/8лр3.PNG)
+![](pic/8лб3.PNG)
 
 
 ## Лабораторная работа №4
@@ -118,7 +118,7 @@ print(my_car._make) # доступ к защищенному атрибуту
 my_car.drive()
 ```
 ### Результат.
-![](pic/8лр4.PNG)
+![](pic/8лб4.PNG)
 
 
 ## Лабораторная работа №5
@@ -156,7 +156,7 @@ my_circle = Circle(7)
 print(f"The area of the circle is: {my_circle.area()}")
 ```
 ### Результат.
-![](pic/8лр5.PNG)
+![](pic/8лб5.PNG)
 
 ## Самостоятельная работа №1
 ###
@@ -165,7 +165,7 @@ print(f"The area of the circle is: {my_circle.area()}")
 
 ```
 ### Результат.
-![](pic/5ср_1.png)
+
 
 ## Самостоятельная работа №2
 ###
@@ -174,7 +174,7 @@ print(f"The area of the circle is: {my_circle.area()}")
 
 ```
 ### Результат.
-![](pic/5ср_2.png)
+
 
 ## Самостоятельная работа №3
 ###
@@ -183,7 +183,7 @@ print(f"The area of the circle is: {my_circle.area()}")
 
 ```
 ### Результат.
-![](pic/5ср_3.png)
+
 
 ## Самостоятельная работа №4
 ###
@@ -192,7 +192,7 @@ print(f"The area of the circle is: {my_circle.area()}")
 
 ```
 ### Результат.
-![](pic/5ср_4.png)
+
 
 ## Самостоятельная работа №5
 ###
@@ -201,4 +201,4 @@ print(f"The area of the circle is: {my_circle.area()}")
 
 ```
 ### Результат.
-![](pic/5ср_5.png)
+

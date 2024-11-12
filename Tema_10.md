@@ -247,7 +247,7 @@ def greet(name):
 @MyDecorator
 def add(a, b):
     return a + b
-greet("Илья")
+greet("Дима")
 result = add(5, 7)
 print("Результат сложения:", result)
 ```

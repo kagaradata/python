@@ -159,9 +159,9 @@ if		name	== '	main	':
 import time
 def time_decorator(func):
     def wrapper(*args, **kwargs):
-        start_time = time.time() # Запоминаем время до выполнения функции
+        start_time = time.time()
         result = func(*args, **kwargs)
-        end_time = time.time() # Запоминаем время после выполнения функции
+        end_time = time.time()
         print(f"Время выполнения функции '{func.__name__}': {end_time - start_time} секунд")
         return result
     return wrapper
@@ -187,7 +187,7 @@ if __name__ == '__main__':
 def read_file(file_path):
     try:
         with open(file_path, 'r') as file:
-            content = file.read().strip() # Считываем содержимое файла и удаляем пробелы
+            content = file.read().strip() 
             if not content:
                 raise ValueError("Файл пустой")
             print(content)
@@ -195,12 +195,10 @@ def read_file(file_path):
         print(ve)
     except FileNotFoundError:
         print("Файл не найден.")
-# Создаем тестовые файлы
 with open("empty_file.txt", "w") as f:
     pass
 with open("sample_file.txt", "w") as f:
     f.write("аоаоаоаоа")
-# Тест
 read_file("empty_file.txt")
 read_file("sample_file.txt")
 ```
@@ -216,12 +214,10 @@ read_file("sample_file.txt")
 ```python
 def add_two(user_input):
     try:
-        # Пытаемся привести введенное значение к типу int
         number = int(user_input)
         return 2 + number 
     except ValueError:
-        print("Неподходящий тип данных. Ожидалось число.")  # Обработка ошибки для неподходящих типов
-# Тесты
+        print("Неподходящий тип данных. Ожидалось число.")
 print(add_two("5"))
 add_two("строка")
 add_two("3.14")
@@ -237,14 +233,11 @@ add_two("3.14")
 
 ```python
 class MyDecorator:
-    # Инициализация декоратора, принимаем функцию func в качестве аргумента
     def __init__(self, func):
         self.func = func
 
-    # Метод __call__ позволяет экземпляру класса вести себя как функция
     def __call__(self, *args, **kwargs):
         print(f"Вызов функции: {self.func.__name__}")
-        # Вызываем оригинальную функцию и сохраняем результат
         result = self.func(*args, **kwargs)
         print(f"Функция {self.func.__name__} завершила выполнение")
         return result
@@ -254,7 +247,6 @@ def greet(name):
 @MyDecorator
 def add(a, b):
     return a + b
-# Тест
 greet("Илья")
 result = add(5, 7)
 print("Результат сложения:", result)
@@ -271,18 +263,15 @@ print("Результат сложения:", result)
 ```python
 class CustomError(Exception):
     pass
-# Функция для проверки, является ли значение положительным
 def check_value(value):
     if value <= 0:
         raise CustomError("Значение должно быть положительным!")
-# Функция для обработки данных с учетом проверки значения
 def process_data(value):
     try:
         check_value(value)
         print(f"Обработка значения: {value}")
     except CustomError as e:
         print(e)
-# Тест
 process_data(0)
 process_data(-5)
 process_data(10)
